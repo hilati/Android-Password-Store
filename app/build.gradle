@@ -25,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId 'dev.msfjarvis.aps'
-        versionCode 10901
+        versionCode 10911
         versionName '1.10.0-SNAPSHOT'
     }
 
@@ -71,8 +71,9 @@ android {
 }
 
 dependencies {
-    implementation deps.androidx.annotation
     implementation deps.androidx.activity_ktx
+    implementation deps.androidx.annotation
+    implementation deps.androidx.autofill
     implementation deps.androidx.appcompat
     implementation deps.androidx.biometric
     implementation deps.androidx.constraint_layout
@@ -92,6 +93,7 @@ dependencies {
     implementation deps.kotlin.coroutines.android
     implementation deps.kotlin.coroutines.core
 
+    implementation deps.third_party.commons_codec
     implementation deps.third_party.fastscroll
     implementation(deps.third_party.jgit) {
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
